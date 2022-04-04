@@ -6,12 +6,12 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:16:36 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/03/29 15:12:45 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/02 10:12:00 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h> */
+#include <stdio.h>
 
 int	ft_isalnum(int c)
 {

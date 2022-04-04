@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 19:26:13 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:19 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/01 15:57:05 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/04 12:00:09 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-int	ft_isdigit(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	void	*result;
+	size_t	i;
+
+	i = count * size;
+	result = malloc(i);
+	if (result == NULL)
+		return (NULL);
+	ft_memset(result, 0, i);
+	return (result);
 }
 
-/* int	main(void)
+/* int main()
 {
-	printf("%d__%d\n", ft_isdigit('2'), ft_isdigit('d'));
-	return (0);
+    size_t count = 3;
+    size_t size = 5;
+    printf("%s\n", calloc(count, size));
+    printf("%s\n", ft_calloc(count, size));
 }
  */

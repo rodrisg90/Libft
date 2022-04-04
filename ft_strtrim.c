@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 19:26:13 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:19 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/03 15:41:41 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/04 13:08:58 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_isdigit(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	size_t	i;
+
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	i = 0;
+	while (*s1 != '\0' && ft_strchr(set, *s1))
+		s1++;
+	i = ft_strlen(s1);
+	while (i != '\0' && ft_strchr(set, s1[i]))
+		i--;
+	return (ft_substr(s1, 0, i + 1));
 }
 
 /* int	main(void)
 {
-	printf("%d__%d\n", ft_isdigit('2'), ft_isdigit('d'));
+	char    *other;
+	other = ft_strtrim("BBACBBBBBB", "B");
+	printf("%s\n", other);
+	free(other);
 	return (0);
 }
  */

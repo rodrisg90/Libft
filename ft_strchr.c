@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 19:26:13 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:19 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/03/31 16:19:03 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/02 12:51:10 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
-int	ft_isdigit(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
+	while (*s != '\0' && (char)c != *s)
+		s++;
+	if ((char)c == *s)
+		return ((char *)s);
 	return (0);
 }
 
-/* int	main(void)
+/* int	main()
 {
-	printf("%d__%d\n", ft_isdigit('2'), ft_isdigit('d'));
-	return (0);
+	printf("%s\n", strchr("Hola mundo", 'd'));
+	printf("%s\n", ft_strchr("Hola mundo", 'd'));
+	return 0;
 }
  */

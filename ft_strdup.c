@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 19:26:13 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:19 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/02 12:00:06 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/02 13:49:03 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-int	ft_isdigit(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	char	*dst;
+	size_t	len;
+
+	len = ft_strlen(s1) + 1;
+	dst = malloc(len);
+	if (dst == NULL)
+		return (NULL);
+	else
+		ft_memcpy (dst, s1, len);
+	return (dst);
 }
 
 /* int	main(void)
 {
-	printf("%d__%d\n", ft_isdigit('2'), ft_isdigit('d'));
+	char *s1 = "HOLA";
+	printf("%s\n", strdup(s1));
+	printf("%s\n", ft_strdup(s1));
 	return (0);
 }
  */
