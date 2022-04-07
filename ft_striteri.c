@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 10:52:40 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 13:59:45 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/06 12:13:02 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/06 12:50:11 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		f(i, s + i);
 		i++;
 	}
-	return (dest);
 }
 
-/* int	main(void)
+/* void	my_func(unsigned int i, char *str)
 {
-	char	dest[20] = "pasapasapasa";
-	char	src[20] = "Qué pasa";
+printf("My inner function: index = %d and the string is %s\n", i, str);
+}
 
-	ft_memcpy(dest, src, 2);
-	printf("%s\n", dest);
-	return (0);
+int	main()
+{
+    char	str[10] = "Hello.";
+    printf("The result is %s\n", str);
+    ft_striteri(str, my_func);
+ 	printf("The result is %s\n", str);
+ 	return 0;
 }
  */

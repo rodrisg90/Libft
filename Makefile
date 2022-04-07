@@ -3,6 +3,8 @@ NAME = libft.a
 
 SRC = *.c
 
+OTHERS = *.gch -c *.out
+
 OBJS = ${SRC:.c=.o}
 
 CC = gcc
@@ -18,7 +20,7 @@ $(NAME):
 			ar crs ${NAME} ${OBJS}
 
 clean:
-			$(RM) ${OBJS}
+			$(RM) ${OBJS} ${OTHERS}
 
 fclean: clean
 			${RM} ${NAME}

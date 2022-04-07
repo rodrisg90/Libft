@@ -6,7 +6,7 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:15:31 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:11:27 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/07 13:58:40 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_bzero(void *s, size_t n)
 
 /* int	main(void)
 {
-	char	str[50] = "This is a test";
+	char	str[50] = "aaaaa";
 
 	puts(str);
 	ft_bzero(str, 4);

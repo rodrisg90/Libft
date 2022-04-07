@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 10:52:40 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 13:59:45 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/07 11:57:40 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/07 13:52:14 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 
-/* int	main(void)
+/* int		main(void)
 {
-	char	dest[20] = "pasapasapasa";
-	char	src[20] = "Qué pasa";
+	char	str[] = "q pasa";
 
-	ft_memcpy(dest, src, 2);
-	printf("%s\n", dest);
-	return (0);
+	t_list	*elem;
+
+	elem = ft_lstnew((void *)str);
+	printf("\n%s\n", elem->content);
 }
  */

@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 10:52:40 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 13:59:45 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/06 12:55:06 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/06 15:32:00 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	write(fd, &c, 1);
 }
 
 /* int	main(void)
 {
-	char	dest[20] = "pasapasapasa";
-	char	src[20] = "Qué pasa";
-
-	ft_memcpy(dest, src, 2);
-	printf("%s\n", dest);
-	return (0);
+	char letter = 'q';
+	ft_putchar_fd(letter, 2);
+	return(0);
 }
  */
