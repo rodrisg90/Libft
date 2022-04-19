@@ -6,15 +6,28 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 15:33:10 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 14:04:11 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/11 17:42:34 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd(45, fd);
+		n *= -1;
+	}
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + 48, fd);
 }
 
 /* int	main(void)

@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 10:15:31 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/08 10:58:15 by rodsanch         ###   ########.fr       */
+/*   Created: 2022/04/12 11:20:33 by rodsanch          #+#    #+#             */
+/*   Updated: 2022/04/12 11:57:32 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	t_list	*new_lst;
+	t_list	*new_elem;
 
-	i = 0;
-	while (i < n)
+	if (!f || !del)
+		return (NULL);
+	new_lst = NULL;
+	while (lst)
 	{
-		((unsigned char *)s)[i] = 0;
-		i++;
+		new_elem = ft_lstnew((*f)(lst->content));
+		if (!new_elem)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, new_elem);
+		lst = lst->next;
 	}
+	return (new_lst);
 }
-
-/* int	main(void)
-{
-	char	str[50] = "aaaaa";
-
-	puts(str);
-	ft_bzero(str, 4);
-	puts(str);
-	return (0);
-}
- */
