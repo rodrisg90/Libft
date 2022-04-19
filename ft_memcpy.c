@@ -6,19 +6,19 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:52:40 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 13:59:45 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:07:41 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];

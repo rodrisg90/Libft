@@ -6,14 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:57:05 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/12 16:15:16 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:05:57 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

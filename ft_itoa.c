@@ -6,12 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:59:42 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/07 10:59:17 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:07:04 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_len(int nb)
 {

@@ -6,12 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 13:59:16 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/03 14:53:17 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:08:37 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

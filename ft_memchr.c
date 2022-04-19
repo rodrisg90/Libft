@@ -6,13 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 19:44:05 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:37 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:07:28 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

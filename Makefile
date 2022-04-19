@@ -27,7 +27,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(LIBC) $@ $^
 
-bonus: $(OBJS_BONUS)
+bonus: $(OBJS_BONUS) $(OBJS)
 	$(LIBC) $(NAME) $^
 
 clean:

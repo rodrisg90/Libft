@@ -6,7 +6,7 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:20:33 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/12 11:57:32 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 18:33:17 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
-	if (!f || !del)
+	if (!lst)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)

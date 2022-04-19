@@ -6,13 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:15:31 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/08 10:58:15 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:05:50 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {

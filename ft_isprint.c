@@ -6,12 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:09:13 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 10:12:31 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:06:59 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isprint(int c)
 {

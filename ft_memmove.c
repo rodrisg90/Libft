@@ -6,13 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:59:22 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/04 16:06:36 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:07:47 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,14 +6,11 @@
 /*   By: rodsanch <rodsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 12:00:06 by rodsanch          #+#    #+#             */
-/*   Updated: 2022/04/02 13:49:03 by rodsanch         ###   ########.fr       */
+/*   Updated: 2022/04/19 17:08:26 by rodsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
